@@ -1,5 +1,5 @@
 use axum::http::StatusCode;
 
 pub async fn always_error() -> Result<(), StatusCode> {
-    Err(StatusCode::FORBIDDEN)
+    Err(StatusCode::IM_A_TEAPOT) // mengembalikan nilai sesuai status code
 }

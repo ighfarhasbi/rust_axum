@@ -23,5 +23,5 @@ pub async fn serialize_json() -> Json<Data> {
             homepage: "https://google.com".to_owned()
         },
     };
-    Json(data)
+    Json(data) // ambil data dari var data dan menterjemahkannya ke json data dan ditampilkan di response saat hit
 }

@@ -11,7 +11,7 @@ pub async fn set_middleware_custom_header(mut request: Request, next: Next) -> R
     // do something with `request`...
     let headers = request.headers();
     let message = headers
-        .get("x-message")
+        .get("x-message") //membuat request header harus menambahkan "x-message"
         .ok_or_else(|| StatusCode::BAD_REQUEST)?;
     let message = message
         .to_str().map_err(|_error| StatusCode::BAD_REQUEST)?
